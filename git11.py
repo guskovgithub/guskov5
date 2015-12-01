@@ -1,11 +1,12 @@
-k,n=int(input()),int(input())
-a=[]
-for i in range(k):
-     a.append(1)
-for i in range(k,n+1):
+k=input().split()
+
+a = [1 for i in range(int(k[0]))]
+for i in range(int(k[0]),int(k[1])+1):
     a.append(0)
-    for j in range(i-k,i):
+    for j in range(i-int(k[0]),i):
        a[i]+=int(a[j])
-print(a[n])       
+       
+       
+print(a[int(k[1])])       
     
      

@@ -1,14 +1,11 @@
-n=input().split()
-t=int(input())
-for j in range(t):
+quzi = input().split()
+time = int(input())
 
- n.insert(0,n[-1])
- n.pop()
- if int(n[0])+1<len(n):
-  n[int(n[0])+1:int(n[0])+1]=n[0]
-  n.pop(0)
- 
+
+
+quzi = [ int(quzi[i]) for i in range(len(quzi))]
+for i in range(time):
+   
+    quzi = quzi[0:-1-quzi[-1]] + [quzi[-1]] + quzi[-1-quzi[-1]:-1]    
     
-
-print(' '.join(n))
-
+print(quzi)
